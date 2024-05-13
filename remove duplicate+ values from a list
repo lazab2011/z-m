@@ -1,0 +1,17 @@
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+MultiCount = {}
+
+for item in some_list:
+  if item in MultiCount:
+    MultiCount[item] +=1
+
+  else:
+    MultiCount[item] = 1
+
+for key, value in MultiCount.items():
+  if value  >1:
+    print (f'{key}: {value}')
+
+
+  
