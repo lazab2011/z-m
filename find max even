@@ -1,0 +1,11 @@
+li = [10, 2,3,4,8,11, 22]
+all_evens = []
+
+# print(highest_even)
+def highest_even(li):
+  for i in li:
+    if i % 2 == 0:
+      all_evens.append(i)
+  print(max(all_evens))
+
+highest_even(li)
