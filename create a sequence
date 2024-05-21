@@ -1,0 +1,71 @@
+# this is how for loops really work
+# def special_for_loop(iterable):
+#     iterator = iter(iterable)
+#     while True:
+#         try:
+#             print(iterator)
+#             next(iterator)
+            
+#         except StopIteration:
+#             break
+# special_for_loop([1,2,3])
+
+
+# let us create our own range function
+
+# class MyGen():
+#     current = 0
+#     def __init__(self, first, last):
+#         self.first = first
+#         self.last = last
+        
+#     def __iter__(self):
+#         return self
+    
+#     def __next__(self):
+#         if MyGen.current < self.last:
+#             num = MyGen.current
+#             MyGen.current += 1
+#             return num
+#         raise StopIteration
+# gen = MyGen(0, 100)
+# for i in gen:
+#     print(i)
+    
+    #check my current location. check if my current location is less than the limit # if less than limit, 
+    # add the first and the last digit to make the current
+    #
+
+
+# def MyFib(num):
+#     a = 0
+#     b = 1
+    
+#     for i in range(num):
+#         yield a
+#         temp = a
+#         a = b
+#         b = temp + b
+
+# for i in MyFib(20):
+#     print(i)
+
+        
+# MyFib(20)  
+
+def fib2(num):
+    a = 0
+    b = 1
+    result = []
+    for i in range(num):
+        
+        result.append(a)
+        temp = a
+        a = b
+        b = temp + b
+    return result
+
+print(fib2(20))
+    
+
+
